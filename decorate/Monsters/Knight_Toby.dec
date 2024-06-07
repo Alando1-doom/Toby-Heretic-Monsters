@@ -1,0 +1,104 @@
+ACTOR Knight_Toby : Knight replaces Knight
+{
+  Translation "190:205=148:165"
+  DropItem "CrossbowAmmoDropped_Toby", 84
+  States
+  {
+  Spawn:
+    XNIG AB 10 A_Look
+    Loop
+  See:
+    XNIG ABCD 4 A_Chase
+	XNIG ABCD 4 A_Chase
+	XNIG ABCD 4 A_Chase
+	XNIG ABCD 4 A_Chase
+	XNIG ABCD 4 A_Chase
+	XNIG ABCD 4 A_Chase
+	XNIG ABCD 4 A_Chase
+	XNIG D 0 A_ActiveSound
+    Loop
+  Melee:
+  Missile:
+    TNT1 A 0 A_Jump(41, "BloodAxe") // 16% chance to throw a blood axe
+  EtherealAxe:
+    XNIG E 10 A_FaceTarget
+    XNIG F 8 A_FaceTarget
+    XNIG G 8 A_CustomComboAttack("KnightAxe", 32, 3 * random(1, 8), "hknight/melee")
+    XNIG E 10 A_FaceTarget
+    XNIG F 8 A_FaceTarget
+    XNIG G 8 A_CustomComboAttack("KnightAxe", 32, 3 * random(1, 8), "hknight/melee")
+    Goto See
+  BloodAxe:
+    XNIG H 10 A_FaceTarget
+    XNIG I 8 A_FaceTarget
+    XNIG J 8 A_CustomComboAttack("RedAxe", 32, 3 * random(1, 8), "hknight/melee")
+    XNIG H 10 A_FaceTarget
+    XNIG I 8 A_FaceTarget
+    XNIG J 8 A_CustomComboAttack("RedAxe", 32, 3 * random(1, 8), "hknight/melee")
+    Goto See
+  Pain:
+    XNIG K 3
+    XNIG K 3 A_Pain
+    Goto See
+  Death:
+    XNIG L 6
+    XNIG M 6 A_Scream
+    XNIG N 6
+    XNIG O 6 A_NoBlocking
+    XNIG PQ 6
+    XNIG R -1
+    Stop
+  }
+}
+
+ACTOR KnightGhost_Toby : KnightGhost replaces KnightGhost
+{
+  Translation "209:224=148:165"
+  DropItem "CrossbowAmmoDropped_Toby", 84
+  -GHOST
+  States
+  {
+  Spawn:
+    GKNI AB 10 A_Look
+    Loop
+  See:
+    GKNI ABCD 4 A_Chase
+	GKNI ABCD 4 A_Chase
+	GKNI ABCD 4 A_Chase
+	GKNI ABCD 4 A_Chase
+	GKNI ABCD 4 A_Chase
+	GKNI D 0 A_ActiveSound
+    Loop
+  Melee:
+  Missile:
+    TNT1 A 0 A_Jump(256, "RightHand", "LeftHand")
+  RightHand:
+    GKNI E 10 A_FaceTarget
+    GKNI F 8 A_FaceTarget
+    GKNI G 8 A_CustomComboAttack("RedAxe", 32, 3 * random(1, 8), "hknight/melee")
+    GKNI E 10 A_FaceTarget
+    GKNI F 8 A_FaceTarget
+    GKNI G 8 A_CustomComboAttack("RedAxe", 32, 3 * random(1, 8), "hknight/melee")
+    Goto See
+  LeftHand:
+    GKNI H 10 A_FaceTarget
+    GKNI I 8 A_FaceTarget
+    GKNI J 8 A_CustomComboAttack("RedAxe", 32, 3 * random(1, 8), "hknight/melee")
+    GKNI H 10 A_FaceTarget
+    GKNI I 8 A_FaceTarget
+    GKNI J 8 A_CustomComboAttack("RedAxe", 32, 3 * random(1, 8), "hknight/melee")
+    Goto See
+  Pain:
+    GKNI K 3
+    GKNI K 3 A_Pain
+    Goto See
+  Death:
+    GKNI L 6
+    GKNI M 6 A_Scream
+    GKNI N 6
+    GKNI O 6 A_NoBlocking
+    GKNI PQ 6
+    GKNI R -1
+    Stop
+  }
+}

@@ -1,0 +1,94 @@
+ACTOR Wizard_Toby : Wizard replaces Wizard
+{
+	DropItem "ClawOrbDropped_Toby", 84
+	DropItem "ArtiTomeOfPower", 4, 0
+	States
+	{
+	Spawn:
+		WZRD AB 10 A_Look
+		Loop
+	See:
+		WZRD A 3 A_Chase
+		WZRD A 4 A_Chase
+		WZRD A 3 A_Chase
+		WZRD A 4 A_Chase
+		WZRD B 3 A_Chase
+		WZRD B 4 A_Chase
+		WZRD B 3 A_Chase
+		WZRD B 4 A_Chase
+		WZRD A 3 A_Chase
+		WZRD A 4 A_Chase
+		WZRD A 3 A_Chase
+		WZRD A 4 A_Chase
+		WZRD B 3 A_Chase
+		WZRD B 4 A_Chase
+		WZRD B 3 A_Chase
+		WZRD B 4 A_Chase
+		WZRD A 3 A_Chase
+		WZRD A 4 A_Chase
+		WZRD A 3 A_Chase
+		WZRD A 4 A_Chase
+		WZRD B 3 A_Chase
+		WZRD B 4 A_Chase
+		WZRD B 3 A_Chase
+		WZRD B 4 A_Chase
+		WZRD A 3 A_Chase
+		WZRD A 4 A_Chase
+		WZRD A 3 A_Chase
+		WZRD A 4 A_Chase
+		WZRD B 3 A_Chase
+		WZRD B 4 A_Chase
+		WZRD B 3 A_Chase
+		WZRD B 4 A_Chase
+		WZRD A 3 A_Chase
+		WZRD A 4 A_Chase
+		WZRD A 3 A_Chase
+		WZRD A 4 A_Chase
+		WZRD B 3 A_Chase
+		WZRD B 4 A_Chase
+		WZRD B 3 A_Chase
+		WZRD B 4 A_Chase
+		WZRD A 3 A_Chase
+		WZRD A 4 A_Chase
+		WZRD A 3 A_Chase
+		WZRD A 4 A_Chase
+		WZRD B 3 A_Chase
+		WZRD B 4 A_Chase
+		WZRD B 3 A_Chase
+		WZRD B 4 A_Chase
+		WZRD B 0 A_ActiveSound
+		Loop
+	Missile:
+		WZRD C 1 Bright A_PlaySound("wizard/charge")
+		WZRD C 1 Bright A_FaceTarget
+		WZRD C 2 A_FaceTarget
+		WZRD C 2 Bright A_FaceTarget
+		WZRD C 2 A_FaceTarget
+		WZRD C 2 Bright A_FaceTarget
+		WZRD C 2 A_FaceTarget
+		WZRD C 2 Bright A_FaceTarget
+		WZRD C 2 A_FaceTarget
+		WZRD C 2 Bright A_FaceTarget
+		WZRD C 2 A_FaceTarget
+		WZRD C 2 Bright A_FaceTarget
+		WZRD C 2 A_FaceTarget
+		WZRD C 2 Bright A_FaceTarget
+		WZRD C 2 A_FaceTarget
+		WZRD C 2 Bright A_FaceTarget
+		WZRD C 2 A_FaceTarget
+		WZRD D 12 Bright A_WizAtk3
+		Goto See
+	Pain:
+		WZRD E 3 A_GhostOff
+		WZRD E 3 A_Pain
+		Goto See
+	Death:
+		WZRD F 6 Bright A_GhostOff
+		WZRD G 6 Bright A_Scream
+		WZRD HI 6 Bright
+		WZRD J 6 A_NoBlocking
+		WZRD KL 6
+		WZRD M -1 A_SetFloorClip
+		Stop
+	}
+}

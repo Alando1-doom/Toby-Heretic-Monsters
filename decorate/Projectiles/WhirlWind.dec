@@ -1,0 +1,12 @@
+ACTOR Whirlwind_Toby : Whirlwind replaces Whirlwind
+{
+-SEEKERMISSILE
++RIPPER
+States
+	{
+	Spawn:
+		FX07 DEFG 3
+		FX07 ABC 3 //A_WhirlwindSeek
+		Goto Spawn+4
+	}
+}

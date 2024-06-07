@@ -1,0 +1,31 @@
+ACTOR Ironlich_Toby : Ironlich replaces Ironlich
+{
+	DropItem "ClawOrbDropped_Toby", 84
+	DropItem "ArtiEgg", 51, 0
+	States
+	{
+	Spawn:
+		LICH A 10 A_Look
+		Loop
+	See:
+		LICH AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 4 A_Chase
+		LICH A 0 A_ActiveSound
+		Loop
+	Missile:
+		LICH A 5 A_FaceTarget
+		LICH B 20 A_LichAttack
+		Goto See
+	Pain:
+		LICH A 4
+		LICH A 4 A_Pain
+		Goto See
+	Death:
+		LICH C 7
+		LICH D 7 A_Scream
+		LICH EF 7
+		LICH G 7 A_NoBlocking
+		LICH H 7
+		LICH I -1 A_BossDeath
+		Stop
+	}
+}

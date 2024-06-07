@@ -1,0 +1,116 @@
+ACTOR Mummy_Toby : Mummy replaces Mummy
+{
+	Game Heretic
+	SpawnID 4
+	DropItem "GoldWandAmmoDropped_Toby", 84
+	States
+	{
+	Spawn:
+		MUMM AB 10 A_Look
+		Loop
+	See:
+		MUMM A 4 A_Chase
+		MUMM A 0 A_PlaySound("mummy/step")
+		MUMM B 4 A_Chase
+		MUMM C 4 A_Chase
+		MUMM C 0 A_PlaySound("mummy/step")
+		MUMM D 4 A_Chase
+		Loop
+	Melee:
+		MUMM E 6 A_FaceTarget
+		MUMM F 6 A_CustomMeleeAttack(random[MummyAttack](1,8)*2, "mummy/attack2", "mummy/attack")
+		MUMM G 6
+		Goto See
+	Pain:
+		MUMM H 4
+		MUMM H 4 A_Pain
+		Goto See
+	Death:
+		MUMM I 5
+		MUMM J 5 A_Scream
+		MUMM K 5 A_SpawnItemEx("MummySoul", 0,0,10, 0,0,1)
+		MUMM L 5
+		MUMM M 5 A_NoBlocking
+		MUMM NO 5
+		MUMM P -1
+		Stop
+	}
+}
+
+
+ACTOR MummyLeader_Toby : Mummy replaces MummyLeader
+{
+	Game Heretic
+	SpawnID 2
+	Health 100
+	Painchance 64
+	SeeSound "mummy/nitrosee"
+	ActiveSound "mummy/nitroact"
+	PainSound "mummy/nitropain"
+	DeathSound "mummy/nitrodie1"
+	Obituary "$OB_MUMMYLEADER"
+	DropItem "GoldWandAmmoDropped_Toby", 84
+	States
+	{
+	Spawn:
+		STOG AB 10 A_Look
+		Loop
+	See:
+		STOG A 4 A_Chase
+		STOG A 0 A_PlaySound("mummy/step")
+		STOG B 4 A_Chase
+		STOG C 4 A_Chase
+		STOG C 0 A_PlaySound("mummy/step")
+		STOG D 4 A_Chase
+		Loop
+	Missile:
+		STOG X 5 A_FaceTarget
+		STOG Y 5 Bright A_FaceTarget
+		STOG X 5 A_FaceTarget
+		STOG Y 5 Bright A_FaceTarget
+		STOG X 5 A_FaceTarget
+		STOG Y 5 Bright A_CustomComboAttack("MummyFX1", 32, random[MummyAttack2](1,8)*2, "mummy/attack2")
+		Goto See
+	Melee:
+		STOG E 6 A_FaceTarget
+		STOG F 6 A_CustomMeleeAttack(random[MummyAttack](1,8)*2, "mummy/attack2", "mummy/attack")
+		STOG G 6
+		Goto See
+	Pain:
+		STOG H 4
+		STOG H 4 A_Pain
+		Goto See
+	Death:
+		STOG I 5
+		STOG J 4 A_Scream
+        STOG J 1 A_PlaySoundEx("mummy/nitrodie2", "Auto", 0, 0)
+		STOG K 5 A_SpawnItemEx("MummySoul", 0,0,10, 0,0,1)
+		STOG L 5
+		STOG M 5 A_NoBlocking
+		STOG NOPQRSTUV 5
+		STOG W -1
+		Stop
+	}
+}
+
+
+ACTOR MummyGhost_Toby : Mummy_Toby replaces MummyGhost
+{
+	Game Heretic
+	SpawnID 8
+	+SHADOW
+	//+GHOST
+	RenderStyle Translucent
+	Alpha 0.4
+}
+
+
+ACTOR MummyLeaderGhost_Toby : MummyLeader_Toby replaces MummyLeaderGhost
+{
+	Game Heretic
+	SpawnID 9
+	+SHADOW
+	//+GHOST
+	RenderStyle Translucent
+	Alpha 0.4
+}

@@ -1,0 +1,95 @@
+ACTOR HereticImp_Toby : HereticImp replaces HereticImp
+{
+	Game Heretic
+	SpawnID 5
+	States
+	{
+	Spawn:
+		IMPX AA 3 A_Look
+		IMPX BB 3 A_Look
+		IMPX CC 3 A_Look
+		IMPX C 0 A_PlaySound("himp/wings")
+		IMPX BB 3 A_Look
+		Loop
+	See:
+		IMPX AA 3 A_Chase
+		IMPX BB 3 A_Chase
+		IMPX CC 3 A_Chase
+		IMPX C 0 A_PlaySound("himp/wings")
+		IMPX BB 3 A_Chase
+		Loop
+	Melee:
+		IMPX DE 6 A_FaceTarget
+		IMPX F 6 A_CustomMeleeAttack(random[ImpMeAttack](5,12), "himp/attack", "himp/attack")
+		Goto See
+	Missile:
+		IMPX A 10 A_FaceTarget
+		IMPX B 6 A_ImpMsAttack
+		IMPX C 6 A_PlaySound("himp/wings")
+		IMPX BAB 6
+		Goto Missile+2
+	}
+}		
+
+ACTOR HereticImpLeader_Toby : HereticImp replaces HereticImpLeader
+{
+	Game Heretic
+	SpawnID 7
+	Health 80
+	-MISSILEMORE
+	SeeSound "himp/leadersee"
+	ActiveSound "himp/leaderact"
+	PainSound "himp/leaderpain"
+	AttackSound "himp/leaderattack"
+	DeathSound "himp/leaderdie"
+	States
+	{
+    Spawn:
+		WATC AA 3 A_Look
+		WATC BB 3 A_Look
+		WATC CC 3 A_Look
+		WATC C 0 A_PlaySound("himp/wings")
+		WATC BB 3 A_Look
+		Loop
+	See:
+		WATC AA 3 A_Chase
+		WATC BB 3 A_Chase
+		WATC CC 3 A_Chase
+		WATC C 0 A_PlaySound("himp/wings")
+		WATC BB 3 A_Chase
+		Loop
+	Missile:
+		WATC DE 6 A_FaceTarget
+		WATC F 6 A_CustomComboAttack("HereticImpBall", 32, random[ImpMsAttack2](5,12), "himp/leaderattack")
+		Goto See
+	Melee:
+		WATC DE 6 A_FaceTarget
+		WATC F 6 A_CustomMeleeAttack(random[ImpMeAttack](5,12), "himp/attack", "himp/attack")
+		Goto See
+	Pain:
+    WATC G 3
+    WATC G 3 A_Pain
+    Goto See
+  Death:
+    WATC G 4 A_ImpDeath
+    WATC H 5
+    Wait
+  XDeath:
+    WATC S 5 A_ImpXDeath1
+    WATC TU 5
+    WATC V 5 A_Gravity
+    WATC W 5 
+    Wait
+  Crash:
+    WATC I 7 A_ImpExplode
+    WATC J 7 A_Scream
+    WATC K 7
+    WATC L -1
+    Stop
+  XCrash:
+    WATC X 7
+    WATC Y 7
+    WATC Z -1
+    Stop
+	}
+}

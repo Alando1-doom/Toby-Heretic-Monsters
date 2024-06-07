@@ -1,0 +1,32 @@
+$rolloff himp/wings	linear	64 512
+himp/wings				wingflap
+himp/leadersee		garglead
+himp/leaderact			leadact
+himp/leaderpain		leadpain
+himp/leaderdie			leaddie
+
+mummy/step			golmstep
+mummy/nitrosee		nitrosee
+mummy/nitroact		nitroact
+mummy/nitropain		nitropn
+mummy/nitrodie1		nitrodt1
+mummy/nitrodie2		nitrodt2
+
+knight/redaxe			redaxe
+
+wizard/charge			wizatk2
+$random wizard/sight	{ wiz/see1 wiz/see2 }
+wiz/see1				wizsit	
+wiz/see2				wizsit2
+
+minotaur/hoof			hoof
+
+clink/step					clnkwalk
+
+beast/step				wdrgwalk
+
+dsparilserpent/sight		serpsit
+dsparilserpent/pain		serppain
+dsparilserpent/death	serpdth
+dsparilserpent/active	serpact
+serpent/step				step

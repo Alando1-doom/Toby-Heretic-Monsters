@@ -1,0 +1,13 @@
+#include decorate/Monsters/Gargoyle_Toby.dec
+#include decorate/Monsters/Golem_Toby.dec
+#include decorate/Monsters/Knight_Toby.dec
+#include decorate/Monsters/Wizard_Toby.dec
+#include decorate/Monsters/Clink_Toby.dec
+#include decorate/Monsters/Weredragon_Toby.dec
+#include decorate/Monsters/Ophidian_Toby.dec
+#include decorate/Monsters/IronLich_Toby.dec
+#include decorate/Monsters/Minotaur_Toby.dec
+#include decorate/Monsters/DSparil_Toby.dec
+
+#include decorate/Projectiles/BloodAxe.dec
+#include decorate/Projectiles/WhirlWind.dec

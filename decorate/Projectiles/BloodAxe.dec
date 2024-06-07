@@ -1,0 +1,15 @@
+ACTOR RedAxe_Toby : RedAxe replaces RedAxe
+{
+	Decal BloodSplat
+	States
+	{
+	Spawn:
+		RAXE A 3 Bright A_PlaySound("knight/redaxe")
+		RAXE A 0 Bright A_DripBlood
+		RAXE BC 3 BRIGHT A_DripBlood
+		Loop
+	Death:
+		RAXE DEF 6 BRIGHT
+		Stop
+	}
+}
