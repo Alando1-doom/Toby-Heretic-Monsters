@@ -11,3 +11,4 @@
 
 #include decorate/Projectiles/BloodAxe.dec
 #include decorate/Projectiles/WhirlWind.dec
+#include decorate/Projectiles/MummyFX1.dec
