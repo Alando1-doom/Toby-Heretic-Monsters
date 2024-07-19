@@ -1,0 +1,9 @@
+ACTOR SnakeProjA_Toby : SnakeProjA replaces SnakeProjA
+{
+	+THRUGHOST
+}	
+
+ACTOR SnakeProjB_Toby : SnakeProjB replaces SnakeProjB
+{
+	+THRUGHOST
+}
