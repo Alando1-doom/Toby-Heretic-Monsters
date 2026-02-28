@@ -1,5 +1,6 @@
 ACTOR RedAxe_Toby : RedAxe replaces RedAxe
 {
+	+THRUGHOST
 	Decal BloodSplat
 	States
 	{

@@ -1,9 +1,37 @@
 ACTOR SnakeProjA_Toby : SnakeProjA replaces SnakeProjA
 {
 	+THRUGHOST
+	States
+	{
+	Spawn:
+		SNFX A 5 Bright A_PlaySoundEx("projectiles/iceball1", "Auto", 1, 0)
+		SNFX BCD 5 Bright
+		Loop
+	Death:
+		SNFX E 1 Bright A_StopSound
+		SNFX E 4 Bright A_PlaySoundEx("projectiles/firex", "Auto", 0, 0)
+		SNFX F 5 Bright
+		SNFX G 4 Bright
+		SNFX HI 3 Bright
+		Stop
+	}
 }	
 
 ACTOR SnakeProjB_Toby : SnakeProjB replaces SnakeProjB
 {
 	+THRUGHOST
+	States
+	{
+	Spawn:
+		SNFX J 6 Bright A_PlaySoundEx("projectiles/fireball1", "Auto", 1, 0)
+		SNFX K 6 Bright
+		Loop
+	Death:
+		SNFX L 1 Bright A_StopSound
+		SNFX L 4 Bright A_PlaySoundEx("projectiles/firex", "Auto", 0, 0)
+		SNFX M 5 Bright
+		SNFX N 4 Bright
+		SNFX O 3 Bright
+		Stop
+	}
 }

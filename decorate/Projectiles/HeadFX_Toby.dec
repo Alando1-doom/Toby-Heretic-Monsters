@@ -1,0 +1,61 @@
+ACTOR HeadFX1_Toby: HeadFX1 replaces HeadFX1
+{
+	+THRUGHOST
+	DamageType Ice
+	States
+	{
+	Spawn:
+		FX05 A 6 Bright A_PlaySoundEx("projectiles/iceball2", "Auto", 1, 0)
+		FX05 BC 6 BRIGHT
+		Loop
+	Death:
+		FX05 D 1 Bright A_StopSound
+		FX05 D 5 BRIGHT A_LichIceImpact
+		FX05 D 0 Bright A_PlaySoundEx("projectiles/icex", "Auto", 0, 0)
+		FX05 EFG 5 BRIGHT
+		Stop
+	}
+}
+
+
+ACTOR HeadFX2_Toby: HeadFX2 replaces HeadFX2
+{
+	+THRUGHOST
+	DamageType Ice
+	States
+	{
+	Spawn:
+		FX05 H 6 Bright A_PlaySoundEx("projectiles/iceball1", "Auto", 1, 0)
+		FX05 IJ 6 BRIGHT
+		Loop
+	Death:
+		FX05 D 1 Bright A_StopSound
+		FX05 D 4 Bright A_PlaySoundEx("projectiles/firex", "Auto", 0, 0)
+		FX05 EFG 5 BRIGHT
+		Stop
+	}
+}
+
+
+ACTOR HeadFX3_Toby: HeadFX3 replaces HeadFX3
+{
+	+THRUGHOST
+	DamageType Fire
+	States
+	{
+	Spawn:
+		FX06 A 4 Bright A_PlaySoundEx("projectiles/fireball2", "Auto", 1, 0)
+		FX06 A 0 Bright A_LichFireGrow
+		FX06 BC 4 BRIGHT A_LichFireGrow
+		Loop
+	NoGrow:
+		FX06 A 5 Bright A_PlaySoundEx("projectiles/fireball2", "Auto", 1, 0)
+		FX06 BC 5 BRIGHT
+		Loop
+	Death:
+		FX06 D 1 Bright A_StopSound
+		FX06 D 4 Bright A_PlaySoundEx("projectiles/fire2x", "Auto", 0, 0)
+		FX06 EFG 5 BRIGHT
+		Stop
+	}
+}

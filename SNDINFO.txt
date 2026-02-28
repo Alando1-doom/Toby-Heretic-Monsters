@@ -30,3 +30,23 @@ dsparilserpent/pain		serppain
 dsparilserpent/death	serpdth
 dsparilserpent/active	serpact
 serpent/step				step
+
+
+//Projectile Sounds
+projectiles/fireball1		firball1
+$rolloff projectiles/fireball1           linear 64 1000
+projectiles/fireball2		firball2
+$rolloff projectiles/fireball2           linear 64 1000
+projectiles/iceball1		snkeice
+$rolloff projectiles/iceball1           linear 64 1000
+projectiles/iceball2		lichice
+$rolloff projectiles/iceball2           linear 64 1000
+projectiles/disciple		discplbl
+$rolloff projectiles/disciple           linear 64 1000
+projectiles/dsparil		dsparbal
+$rolloff projectiles/dsparil           linear 64 1000
+projectiles/minotaur		minowave
+$rolloff projectiles/minotaur           linear 64 1000
+projectiles/firex			lobhit
+projectiles/fire2x			firbal2x
+projectiles/icex				icebalx

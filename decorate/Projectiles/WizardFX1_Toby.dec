@@ -1,0 +1,16 @@
+ACTOR WizardFX1_Toby: WizardFX1 replaces WizardFX1
+{
+	+THRUGHOST
+	States
+	{
+	Spawn:
+		FX11 A 6 Bright A_PlaySoundEx("projectiles/disciple", "Auto", 1, 0)
+		FX11 B 6 BRIGHT
+		Loop
+	Death:
+		FX11 C 1 Bright A_StopSound
+		FX11 C 4 Bright A_PlaySoundEx("projectiles/firex", "Auto", 0, 0)
+		FX11 DEFG 5 BRIGHT
+		Stop
+	}
+}

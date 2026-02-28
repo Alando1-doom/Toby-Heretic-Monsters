@@ -1,0 +1,19 @@
+ACTOR BeastBall_Toby: BeastBall replaces BeastBall
+{
+	+THRUGHOST
+	States
+	{
+	Spawn:
+		FRB1 A 2 Bright A_PlaySoundEx("projectiles/fireball2", "Auto", 1, 0)
+		FRB1 A 0 Bright A_SpawnItemEx("Puffy", random2[BeastPuff]()*0.015625, random2[BeastPuff]()*0.015625, random2[BeastPuff]()*0.015625, 
+									0,0,0,0,SXF_ABSOLUTEPOSITION, 64)
+		FRB1 ABBCC 2 Bright A_SpawnItemEx("Puffy", random2[BeastPuff]()*0.015625, random2[BeastPuff]()*0.015625, random2[BeastPuff]()*0.015625, 
+									0,0,0,0,SXF_ABSOLUTEPOSITION, 64)
+		Loop
+	Death:
+		FRB1 D 1 Bright A_StopSound
+		FRB1 D 3 Bright A_PlaySoundEx("projectiles/fire2x", "Auto", 0, 0)
+		FRB1 EFGH 4 Bright
+		Stop
+	}
+}
