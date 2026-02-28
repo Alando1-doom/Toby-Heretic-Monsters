@@ -13,3 +13,10 @@
 #include decorate/Projectiles/WhirlWind.dec
 #include decorate/Projectiles/MummyFX1.dec
 #include decorate/Projectiles/SnakeProj.dec
+#include decorate/Projectiles/BeastBall_Toby.dec
+#include decorate/Projectiles/HereticImpBall_Toby.dec
+#include decorate/Projectiles/WizardFX1_Toby.dec
+#include decorate/Projectiles/SorcererFX1_Toby.dec
+#include decorate/Projectiles/Sorcerer2FX1_Toby.dec
+#include decorate/Projectiles/HeadFX_Toby.dec
+#include decorate/Projectiles/MinotaurFX_Toby.dec

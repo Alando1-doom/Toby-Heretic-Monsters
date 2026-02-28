@@ -1,0 +1,18 @@
+ACTOR Sorcerer2FX1_Toby: Sorcerer2FX1 replaces Sorcerer2FX1
+{
+	+THRUGHOST
+	States
+	{
+	Spawn:
+		FX16 A 3 Bright A_BlueSpark
+		FX16 A 0 Bright A_PlaySoundEx("projectiles/dsparil", "Auto", 1, 0)
+		FX16 BC 3 BRIGHT A_BlueSpark
+		Loop
+	Death:
+		FX16 G 1 Bright A_StopSound
+		FX16 G 4 BRIGHT A_Explode(random[S2FX1](80,111))
+		FX16 G 0 Bright A_PlaySoundEx("weapons/bowhit", "Auto", 0, 0)
+		FX16 HIJKL 5 BRIGHT
+		Stop
+	}
+}

@@ -1,0 +1,16 @@
+ACTOR HereticImpBall_Toby: HereticImpBall replaces HereticImpBall
+{
+	+THRUGHOST
+	States
+	{
+	Spawn:
+		FX10 A 6 Bright A_PlaySoundEx("projectiles/fireball1", "Auto", 1, 0)
+		FX10 BC 6 Bright
+		Loop
+	Death:
+		FX10 D 1 Bright A_StopSound
+		FX10 D 4 Bright A_PlaySoundEx("projectiles/firex", "Auto", 0, 0)
+		FX10 EFG 5 Bright
+		Stop
+	}
+}
