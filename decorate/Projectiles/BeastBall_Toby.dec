@@ -1,6 +1,7 @@
 ACTOR BeastBall_Toby: BeastBall replaces BeastBall
 {
 	+THRUGHOST
+	FastSpeed 12
 	States
 	{
 	Spawn:

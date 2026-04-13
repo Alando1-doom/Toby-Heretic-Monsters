@@ -1,6 +1,7 @@
 ACTOR WizardFX1_Toby: WizardFX1 replaces WizardFX1
 {
 	+THRUGHOST
+	FastSpeed 18
 	States
 	{
 	Spawn:

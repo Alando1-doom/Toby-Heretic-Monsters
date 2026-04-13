@@ -1,6 +1,7 @@
 ACTOR HereticImpBall_Toby: HereticImpBall replaces HereticImpBall
 {
 	+THRUGHOST
+	FastSpeed 10
 	States
 	{
 	Spawn:
