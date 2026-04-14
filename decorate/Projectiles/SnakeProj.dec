@@ -1,6 +1,7 @@
 ACTOR SnakeProjA_Toby : SnakeProjA replaces SnakeProjA
 {
 	+THRUGHOST
+	FastSpeed 14
 	States
 	{
 	Spawn:
@@ -20,10 +21,11 @@ ACTOR SnakeProjA_Toby : SnakeProjA replaces SnakeProjA
 ACTOR SnakeProjB_Toby : SnakeProjB replaces SnakeProjB
 {
 	+THRUGHOST
+	FastSpeed 14
 	States
 	{
 	Spawn:
-		SNFX J 6 Bright A_PlaySoundEx("projectiles/fireball1", "Auto", 1, 0)
+		SNFX J 6 Bright A_PlaySoundEx("projectiles/snakefire", "Auto", 1, 0)
 		SNFX K 6 Bright
 		Loop
 	Death:

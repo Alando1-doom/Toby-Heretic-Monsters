@@ -1,6 +1,7 @@
 ACTOR Sorcerer2FX1_Toby: Sorcerer2FX1 replaces Sorcerer2FX1
 {
 	+THRUGHOST
+	FastSpeed 20
 	States
 	{
 	Spawn:

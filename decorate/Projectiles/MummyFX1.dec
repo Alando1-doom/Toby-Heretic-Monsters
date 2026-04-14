@@ -1,4 +1,5 @@
 ACTOR MummyFX1_Toby : MummyFX1 replaces MummyFX1
 {
 +THRUGHOST
+FastSpeed 9
 }

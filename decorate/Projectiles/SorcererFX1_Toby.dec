@@ -1,10 +1,11 @@
 ACTOR SorcererFX1_Toby: SorcererFX1 replaces SorcererFX1
 {
 	+THRUGHOST
+	FastSpeed 20
 	States
 	{
 	Spawn:
-		FX14 A 6 Bright A_PlaySoundEx("projectiles/fireball2", "Auto", 1, 0)
+		FX14 A 6 Bright A_PlaySoundEx("projectiles/chaosfire", "Auto", 1, 0)
 		FX14 BC 6 BRIGHT
 		Loop
 	Death:

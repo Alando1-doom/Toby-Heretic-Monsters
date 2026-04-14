@@ -10,6 +10,7 @@
 #include decorate/Monsters/DSparil_Toby.dec
 
 #include decorate/Projectiles/BloodAxe.dec
+#include decorate/Projectiles/KnightAxe.dec
 #include decorate/Projectiles/WhirlWind.dec
 #include decorate/Projectiles/MummyFX1.dec
 #include decorate/Projectiles/SnakeProj.dec

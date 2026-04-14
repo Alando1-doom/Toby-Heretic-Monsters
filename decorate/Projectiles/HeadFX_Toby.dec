@@ -2,6 +2,7 @@ ACTOR HeadFX1_Toby: HeadFX1 replaces HeadFX1
 {
 	+THRUGHOST
 	DamageType Ice
+	FastSpeed 13
 	States
 	{
 	Spawn:
@@ -41,15 +42,16 @@ ACTOR HeadFX3_Toby: HeadFX3 replaces HeadFX3
 {
 	+THRUGHOST
 	DamageType Fire
+	FastSpeed 10
 	States
 	{
 	Spawn:
-		FX06 A 4 Bright A_PlaySoundEx("projectiles/fireball2", "Auto", 1, 0)
+		FX06 A 4 Bright A_PlaySoundEx("projectiles/lichfire", "Auto", 1, 0)
 		FX06 A 0 Bright A_LichFireGrow
 		FX06 BC 4 BRIGHT A_LichFireGrow
 		Loop
 	NoGrow:
-		FX06 A 5 Bright A_PlaySoundEx("projectiles/fireball2", "Auto", 1, 0)
+		FX06 A 5 Bright A_PlaySoundEx("projectiles/lichfire", "Auto", 1, 0)
 		FX06 BC 5 BRIGHT
 		Loop
 	Death:

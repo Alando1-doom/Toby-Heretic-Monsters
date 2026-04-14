@@ -1,0 +1,4 @@
+ACTOR KnightAxe_Toby: KnightAxe replaces KnightAxe
+{
+	FastSpeed 9
+}
