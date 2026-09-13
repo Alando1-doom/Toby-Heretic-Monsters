@@ -65,10 +65,12 @@ ACTOR MummyLeader_Toby : Mummy replaces MummyLeader
 		Loop
 	Missile:
 		STOG X 5 A_FaceTarget
+		STOG X 0 A_PlaySound("mummy/charge")
 		STOG Y 5 Bright A_FaceTarget
 		STOG X 5 A_FaceTarget
 		STOG Y 5 Bright A_FaceTarget
 		STOG X 5 A_FaceTarget
+		STOG Y 0 A_PlaySound("mummy/nitroshot")
 		STOG Y 5 Bright A_CustomComboAttack("MummyFX1", 32, random[MummyAttack2](1,8)*2, "mummy/attack2")
 		Goto See
 	Melee:
