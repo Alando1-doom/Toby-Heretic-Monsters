@@ -6,12 +6,20 @@ himp/leaderpain		leadpain
 himp/leaderdie			leaddie
 
 mummy/step			golmstep
+$rolloff mummy/step				linear 64 640
 mummy/nitrosee		nitrosee
 mummy/nitroact		nitroact
 mummy/nitropain		nitropn
 mummy/nitrodie1		nitrodt1
 mummy/nitrodie2		nitrodt2
 
+$random knight/walk  { knight/step1 knight/step2 knight/step3 }
+knight/step1				kntstep1
+knight/step2				kntstep2
+knight/step3				kntstep3
+$rolloff knight/step1				linear 64 640
+$rolloff knight/step2				linear 64 640
+$rolloff knight/step3				linear 64 640
 knight/redaxe			redaxe
 
 wizard/charge			wizatk2
@@ -22,8 +30,10 @@ wiz/see2				wizsit2
 minotaur/hoof			hoof
 
 clink/step					clnkwalk
+$rolloff clink/step				linear 64 640
 
 beast/step				wdrgwalk
+$rolloff beast/step				linear 64 640
 
 dsparilserpent/sight		serpsit
 dsparilserpent/pain		serppain

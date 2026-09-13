@@ -8,32 +8,73 @@ ACTOR Knight_Toby : Knight replaces Knight
     XNIG AB 10 A_Look
     Loop
   See:
-    XNIG ABCD 4 A_Chase
-	XNIG ABCD 4 A_Chase
-	XNIG ABCD 4 A_Chase
-	XNIG ABCD 4 A_Chase
-	XNIG ABCD 4 A_Chase
-	XNIG ABCD 4 A_Chase
-	XNIG ABCD 4 A_Chase
-	XNIG D 0 A_ActiveSound
+    XNIG A 4 A_Chase
+	XNIG A 0 A_PlaySound("knight/walk")
+	XNIG B 4 A_Chase
+	XNIG C 4 A_Chase
+	XNIG C 0 A_PlaySound("knight/walk")
+	XNIG D 4 A_Chase
+	XNIG A 4 A_Chase
+	XNIG A 0 A_PlaySound("knight/walk")
+	XNIG B 4 A_Chase
+	XNIG C 4 A_Chase
+	XNIG C 0 A_PlaySound("knight/walk")
+	XNIG D 4 A_Chase
+	XNIG A 4 A_Chase
+	XNIG A 0 A_PlaySound("knight/walk")
+	XNIG B 4 A_Chase
+	XNIG C 4 A_Chase
+	XNIG C 0 A_PlaySound("knight/walk")
+	XNIG D 4 A_Chase
+	XNIG A 4 A_Chase
+	XNIG A 0 A_PlaySound("knight/walk")
+	XNIG B 4 A_Chase
+	XNIG C 4 A_Chase
+	XNIG C 0 A_PlaySound("knight/walk")
+	XNIG D 4 A_Chase
+	XNIG A 4 A_Chase
+	XNIG A 0 A_PlaySound("knight/walk")
+	XNIG B 4 A_Chase
+	XNIG C 4 A_Chase
+	XNIG C 0 A_PlaySound("knight/walk")
+	XNIG D 4 A_Chase
+	XNIG A 4 A_Chase
+	XNIG A 0 A_PlaySound("knight/walk")
+	XNIG B 4 A_Chase
+	XNIG C 4 A_Chase
+	XNIG C 0 A_PlaySound("knight/walk")
+	XNIG D 4 A_Chase
+	XNIG A 4 A_Chase
+	XNIG A 0 A_PlaySound("knight/walk")
+	XNIG B 4 A_Chase
+	XNIG C 4 A_Chase
+	XNIG C 0 A_PlaySound("knight/walk")
+	XNIG D 4 A_Chase
+	//XNIG D 0 A_ActiveSound
     Loop
   Melee:
   Missile:
     TNT1 A 0 A_Jump(41, "BloodAxe") // 16% chance to throw a blood axe
   EtherealAxe:
     XNIG E 10 A_FaceTarget
+	XNIG E 0 A_PlaySoundEx("knight/charge", "Auto", 0, 0)
     XNIG F 8 A_FaceTarget
+	XNIG F 0 A_PlaySound("knight/swing")
     XNIG G 8 A_CustomComboAttack("KnightAxe", 32, 3 * random(1, 8), "hknight/melee")
     XNIG E 10 A_FaceTarget
     XNIG F 8 A_FaceTarget
+	XNIG F 0 A_PlaySound("knight/swing")
     XNIG G 8 A_CustomComboAttack("KnightAxe", 32, 3 * random(1, 8), "hknight/melee")
     Goto See
   BloodAxe:
     XNIG H 10 A_FaceTarget
+	XNIG H 0 A_PlaySoundEx("knight/charge", "Auto", 0, 0)
     XNIG I 8 A_FaceTarget
+	XNIG I 0 A_PlaySound("knight/swing")
     XNIG J 8 A_CustomComboAttack("RedAxe", 32, 3 * random(1, 8), "hknight/melee")
     XNIG H 10 A_FaceTarget
     XNIG I 8 A_FaceTarget
+	XNIG I 0 A_PlaySound("knight/swing")
     XNIG J 8 A_CustomComboAttack("RedAxe", 32, 3 * random(1, 8), "hknight/melee")
     Goto See
   Pain:
@@ -62,30 +103,61 @@ ACTOR KnightGhost_Toby : KnightGhost replaces KnightGhost
     GKNI AB 10 A_Look
     Loop
   See:
-    GKNI ABCD 4 A_Chase
-	GKNI ABCD 4 A_Chase
-	GKNI ABCD 4 A_Chase
-	GKNI ABCD 4 A_Chase
-	GKNI ABCD 4 A_Chase
-	GKNI D 0 A_ActiveSound
+    GKNI A 4 A_Chase
+	GKNI A 0 A_PlaySound("knight/walk")
+	GKNI B 4 A_Chase
+	GKNI C 4 A_Chase
+	GKNI C 0 A_PlaySound("knight/walk")
+	GKNI D 4 A_Chase
+	GKNI A 4 A_Chase
+	GKNI A 0 A_PlaySound("knight/walk")
+	GKNI B 4 A_Chase
+	GKNI C 4 A_Chase
+	GKNI C 0 A_PlaySound("knight/walk")
+	GKNI D 4 A_Chase
+	GKNI A 4 A_Chase
+	GKNI A 0 A_PlaySound("knight/walk")
+	GKNI B 4 A_Chase
+	GKNI C 4 A_Chase
+	GKNI C 0 A_PlaySound("knight/walk")
+	GKNI D 4 A_Chase
+	GKNI A 4 A_Chase
+	GKNI A 0 A_PlaySound("knight/walk")
+	GKNI B 4 A_Chase
+	GKNI C 4 A_Chase
+	GKNI C 0 A_PlaySound("knight/walk")
+	GKNI D 4 A_Chase
+	GKNI A 4 A_Chase
+	GKNI A 0 A_PlaySound("knight/walk")
+	GKNI B 4 A_Chase
+	GKNI C 4 A_Chase
+	GKNI C 0 A_PlaySound("knight/walk")
+	GKNI D 4 A_Chase
+	//GKNI D 0 A_ActiveSound
     Loop
   Melee:
   Missile:
     TNT1 A 0 A_Jump(256, "RightHand", "LeftHand")
   RightHand:
     GKNI E 10 A_FaceTarget
+	GKNI E 0 A_PlaySoundEx("knight/charge", "Auto", 0, 0)
     GKNI F 8 A_FaceTarget
+	GKNI F 0 A_PlaySound("knight/swing")
     GKNI G 8 A_CustomComboAttack("RedAxe", 32, 3 * random(1, 8), "hknight/melee")
     GKNI E 10 A_FaceTarget
     GKNI F 8 A_FaceTarget
+	GKNI F 0 A_PlaySound("knight/swing")
     GKNI G 8 A_CustomComboAttack("RedAxe", 32, 3 * random(1, 8), "hknight/melee")
     Goto See
   LeftHand:
     GKNI H 10 A_FaceTarget
+	GKNI H 0 A_PlaySoundEx("knight/charge", "Auto", 0, 0)
     GKNI I 8 A_FaceTarget
+	GKNI I 0 A_PlaySound("knight/swing")
     GKNI J 8 A_CustomComboAttack("RedAxe", 32, 3 * random(1, 8), "hknight/melee")
     GKNI H 10 A_FaceTarget
     GKNI I 8 A_FaceTarget
+	GKNI I 0 A_PlaySound("knight/swing")
     GKNI J 8 A_CustomComboAttack("RedAxe", 32, 3 * random(1, 8), "hknight/melee")
     Goto See
   Pain:
